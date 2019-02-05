@@ -1,0 +1,22 @@
+{
+    "name": "itworks/sylius-razorpay-plugin",
+    "type": "sylius-plugin",
+    "description": "Razorpay payment plugin for Sylius applications",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hlib Synkovskyi",
+            "email": "gleb.sinkovskiy@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "sylius/sylius": "^1.0",
+        "razorpay/razorpay": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "ITWorks\\SyliusRazorpayPlugin\\": "src/"
+        }
+    }
+}

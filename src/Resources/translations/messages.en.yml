@@ -1,0 +1,5 @@
+itworks:
+    razorpay_plugin:
+        api_key: API Key
+        api_secret: API Secret
+        gateway_label: Razorpay

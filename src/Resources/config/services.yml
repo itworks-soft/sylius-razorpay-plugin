@@ -1,0 +1,22 @@
+services:
+    itworks.razorpay_plugin.form.type.gateway_configuration:
+        class: ITWorks\SyliusRazorpayPlugin\Form\Type\RazorpayGatewayConfigurationType
+        tags:
+            - { name: sylius.gateway_configuration_type, type: razorpay, label: itworks.razorpay_plugin.gateway_label }
+            - { name: form.type }
+
+    itworks.razorpay_plugin.gateway_factory:
+        class: Payum\Core\Bridge\Symfony\Builder\GatewayFactoryBuilder
+        arguments: [ITWorks\SyliusRazorpayPlugin\RazorpayGatewayFactory]
+        tags:
+            - { name: payum.gateway_factory_builder, factory: razorpay }
+
+    itworks.razorpay_plugin.bridge.razorpay:
+        class: ITWorks\SyliusRazorpayPlugin\Bridge\RazorpayBridge
+
+    itworks.razorpay_plugin.razorpay_action:
+        class: ITWorks\SyliusRazorpayPlugin\Action\RazorpayAction
+        public: true
+        arguments: ['@itworks.razorpay_plugin.bridge.razorpay', '@payum']
+        tags:
+            - { name: payum.action, factory: razorpay, alias: payum.action.set_razorpay }

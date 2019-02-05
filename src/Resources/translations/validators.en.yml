@@ -1,0 +1,7 @@
+itworks:
+    razorpay_plugin:
+        gateway_configuration:
+            api_key:
+                not_blank: The API Key has not been provided.
+            api_secret:
+                not_blank: The API Secret code has not been provided.
