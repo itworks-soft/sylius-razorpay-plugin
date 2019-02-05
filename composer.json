@@ -1,5 +1,5 @@
 {
-    "name": "itworks-soft/sylius-razorpay-plugin",
+    "name": "gsinkovskiy/sylius-razorpay-plugin",
     "type": "sylius-plugin",
     "description": "Razorpay payment plugin for Sylius applications",
     "license": "MIT",
